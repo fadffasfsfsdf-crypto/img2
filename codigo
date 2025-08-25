@@ -1,0 +1,28 @@
+// Crear overlay
+let overlay = document.createElement('div');
+Object.assign(overlay.style, {
+  position: 'fixed',       // siempre visible
+  top: '0',
+  left: '0',
+  width: '100%',
+  height: '100%',
+  display: 'flex',         // usar flex para centrar
+  justifyContent: 'center',// centrar horizontal
+  alignItems: 'center',    // centrar vertical
+  pointerEvents: 'none',   // no bloquea clics de la página
+  zIndex: '10000'          // encima de todo
+});
+document.body.appendChild(overlay);
+
+// Crear imagen
+let img = document.createElement('img');
+img.src = 'https://raw.githubusercontent.com/fadffasfsfsdf-crypto/img2/main/1.png';
+
+Object.assign(img.style, {
+  width: '50%',    // tamaño relativo al ancho de la pantalla
+  height: 'auto',  // mantener proporción
+  opacity: '0.3',  // semitransparente
+  pointerEvents: 'none' // no interfiere con ningún clic
+});
+
+overlay.appendChild(img);
